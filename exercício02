@@ -1,0 +1,40 @@
+# Faça um Programa para uma loja de tintas. O programa deverá pedir o tamanho em metros quadrados da área a ser pintada. 
+# Considere que a cobertura da tinta é de 1 litro para cada 6 metros quadrados e que a tinta é vendida em latas de 18 litros, 
+# que custam R$ 80,00 ou em galões de 3,6 litros, que custam R$ 25,00.
+
+#     Informe ao usuário as quantidades de tinta a serem compradas e os respectivos preços em 3 situações:
+#     comprar apenas latas de 18 litros;
+#     comprar apenas galões de 3,6 litros;
+#     misturar latas e galões, de forma que o desperdício de tinta seja menor. 
+#     Acrescente 10% de folga e sempre arredonde os valores para cima, isto é, considere latas cheias.
+
+import math 
+
+area = float(input('Digite a area em metros quadrados que deseja pintar: '))
+
+litro_tinta = math.ceil(area/6)
+
+tinta_mais_folga = (litro_tinta*0.1) + litro_tinta
+
+qtd_lata = math.ceil(litro_tinta/18)
+
+qtd_galao = math.ceil(litro_tinta/3.6)
+
+litro = area/6
+lata = int(litro/18)
+galao = math.ceil((litro_tinta%18)/3.6)
+
+
+print(f'''
+Quantidade de tinta: {math.ceil(tinta_mais_folga)} litros
+{'='*50}
+Opção 1) Quantidade: {qtd_lata} latas.
+         Total: {qtd_lata*80} reais
+{'='*50}
+Opção 2) Quantidade: {qtd_galao} galões
+         Total: {qtd_galao*25} reais
+{'='*50}
+Opção 3) Quantidade: {lata} latas e {galao} galões
+         Total: {lata*80 + galao*25} reais
+{'='*50}
+''')
