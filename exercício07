@@ -1,0 +1,34 @@
+# Conta espaços e vogais. Dado uma string com uma frase informada pelo usuário (incluindo espaços em branco), conte:
+
+#  quantos espaços em branco existem na frase.
+#  quantas vezes aparecem as vogais a, e, i, o, u. 
+
+
+frase = input('Digite uma frase: ')
+
+vogais = 0
+espacos = 0
+vogA = 0
+vogE = 0
+vogI = 0
+vogO = 0
+vogU = 0
+
+for caractere in frase:
+  if caractere in 'AaEeIiOoUu': 
+    vogais += 1
+  if caractere in 'Aa':
+    vogA +=1
+  if caractere in 'Ee':
+    vogE +=1
+  if caractere in 'Ii':
+    vogI +=1
+  if caractere in 'Oo':
+    vogO +=1
+  if caractere in 'Uu':
+      vogU +=1
+  elif caractere in ' ':
+    espacos+=1
+
+print(f'''Aparecem {vogais} vogais e {espacos} espaços na frase.
+Sendo {vogA} vezes a vogal A, {vogE} vezes a vogal E, {vogI} vezes a vogal I, {vogO} vezes a vogal O e {vogU} vezes a vogal U.''')
