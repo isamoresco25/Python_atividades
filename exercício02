@@ -11,19 +11,17 @@
 import math 
 
 area = float(input('Digite a area em metros quadrados que deseja pintar: '))
+# Tratar a entrada. Usuário pode digitar algo diferente do esperado.
 
-litro_tinta = math.ceil(area/6)
-
+litro_tinta = math.ceil(area/6) # Muito bom utilizar o ceil! Não tinha pensado nisso
 tinta_mais_folga = (litro_tinta*0.1) + litro_tinta
-
 qtd_lata = math.ceil(litro_tinta/18)
-
 qtd_galao = math.ceil(litro_tinta/3.6)
 
 litro = area/6
 lata = int(litro/18)
-galao = math.ceil((litro_tinta%18)/3.6)
-
+galao = math.ceil((litro_tinta%18)/3.6) # math.ceil((litro_tinta % 18) / 3.6)
+# Talvez utilizar espaços para facilitar a leitura
 
 print(f'''
 Quantidade de tinta: {math.ceil(tinta_mais_folga)} litros
@@ -38,3 +36,9 @@ Opção 3) Quantidade: {lata} latas e {galao} galões
          Total: {lata*80 + galao*25} reais
 {'='*50}
 ''')
+# Gostei da separação que foi feita e o print de todas as informações já juntas. 
+    # Uma outra opção seria fazer um menu com as opções. Ex: 1. Galões | 2. Latas | 3. Misturado
+
+# Separar por blocos deixa o código mais agradável
+
+# Curti! Ficou bem legal!

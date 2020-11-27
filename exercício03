@@ -9,17 +9,30 @@
 a = float(input('Qual o lado1 do tiângulo? '))
 b = float(input('Qual o lado2 do tiângulo? '))
 c = float(input('Qual o lado3 do tiângulo? '))
+# Validar entradas
 
 def condicoes():
   while (b-c) < a < (b+c) and (a-c) < b < (a+c) and (a-b) < c < (a+b):
+      # Essa parte ficou um pouco confusa (talvez pelo número de comparações)
+      # O uso do while ficou um pouco confuso, não poderia ser usado o if?
     print('É um triângulo')
     break
   if a==b==c:
+      # Até onde eu sei o mais correto para comparar 3 variáveis é: a == b and b == a.
     print('Triângulo Equilátero')
-  elif a==b!=c:
+  elif a==b!=c: 
     print('Triângulo Isósceles')
   elif a!=b!=c:
     print('Triângulo Escaleno')
   else:
     print('Não é um triângulo')
+
+# Isa talvez seja uma melhor opção verificar se os dados formam um triangulo. Em caso negativo apresenta a 
+# mensagem "Não é triangulo". Em caso positivo já informa o seu tipo (Equilátero, Isósceles, Escaleno), dessa 
+# forma reduz o número de linhas e o tempo de processamento é menor.
+
 condicoes()
+# Novamente o código será executado apenas uma vez, vc pod fazer um menuzinho para que caso o usuário
+# queira rodar novamente ele vai poder sem precisar sair de tudo e fazer de novo. 
+
+# De maneira geral o códico ficou bem bom e organizado. Neeeext one :)

@@ -2,23 +2,29 @@
 # um número inteiro informado pelo usuário. 
 
 numero = int(input('Digite um número: '))
+# Tratar a entrada de dados
 primos = []
 
 for i in range(1, numero+1):
   if i ==1:
-    print('Número 1 não é primo!')
+    print('Número 1 não é primo!') # Muito legal vc ter tratado isso! Eu nem tinha pensado nisso :)
   elif i != 1:
     valores_divisiveis = []
-    for a in range(i+1):
+    for a in range(i+1): # Essa meiúca aqui ficou um pouquinho poluído quando olha pela primeira vez
       if i % (a+1) == 0:
         valores_divisiveis.append(a)
     if len(valores_divisiveis) == 2:
       primos.append(i)
+
 for numeros in primos:
-  print(f'''O número {numeros} é primo!''')
+  print(f'''O número {numeros} é primo!''') 
+  # Talvez isso (apesar de bem legal) não seja necessário pq logo abaixo vc lista todos os números primos.
   
-print(f'''Lista de números primos até o valor digitado:
+print(f'''Lista de números primos até o valor digitado: 
 {primos}''')
+
+# Gostei bastante do seu código! Ficou bem completinho e organizado.
+# Unica coisa pra complementar nesse aqui é colocar isso em um main para o usuário executar mais de uma vez.
 
 
 
