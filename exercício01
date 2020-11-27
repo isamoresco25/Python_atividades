@@ -13,26 +13,35 @@
 #     = Salário Liquido : R$
 
 
-sal_hora = float(input('Digite o salário que você ganha por hora: '))
-
+sal_hora  = float(input('Digite o salário que você ganha por hora: '))
 num_horas = float(input('Digite quantas horas você trabalha por mês: '))
+# Validar outras entradas para que não ocorra erro na execução.
+    # Talvez com try-except.
 
 sal_bruto = (sal_hora*num_horas)
-
-ir = (sal_bruto*(11/100))
-
-inss = (sal_bruto*(8/100))
-
+ir        = (sal_bruto*(11/100))
+inss      = (sal_bruto*(8/100))
 sindicato = (sal_bruto*(5/100))
+contas    = ir+inss+sindicato
+sal_liq   = sal_bruto - contas
+# Talvez nomear as variáveis com mais clareza
+    # Se alguém pegar o código sem saber do problema em questão pode ficar confuso o que seria o 'ir' ou 'sal_liq'.
 
-contas = ir+inss+sindicato
-
-sal_liq = sal_bruto - contas
-
-print(f''' {'='*30}
-+ Salário Bruto : R$ {sal_bruto}
-- IR (11%) : R$ {ir}
-- INSS (8%) : R$ {inss}
+print(f''' 
+{'='*30}
++ Salário Bruto   : R$ {sal_bruto}
+- IR (11%)        : R$ {ir}
+- INSS (8%)       : R$ {inss}
 - Sindicato ( 5%) : R$ {sindicato}
 = Salário Liquido : R$ {sal_liq}
 {'='*30}''')
+# Ficou bem clean e fácil de entender a saída de dados! Legal :)
+
+# Separar o código por blocos de funções parecidas torna mais fácil a compreensão
+    # Bloco 1: Entrada de dados (1 - 2).
+    # Bloco 2: Calculos necessários para o problema (4 - 9).
+    # Bloco 3: Saída de dados (11 - 17).
+
+# Opção: criar um __name__ == __main__ para que quando termine execute novamente para uma nova consulta
+
+# Ficou muito bom, Isa! Parabéns :)

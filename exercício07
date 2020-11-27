@@ -13,13 +13,16 @@ vogE = 0
 vogI = 0
 vogO = 0
 vogU = 0
+# Uma opção para não usar tantas linhas é fazer assim: vogais, espacos, vogA, vogE, vogI, vogO, vogU = 0, 0, 0, 0, 0, 0, 0
+# Não sei dizer se isso é algo recomendado, mas ta aí :)
 
 for caractere in frase:
   if caractere in 'AaEeIiOoUu': 
-    vogais += 1
+    vogais += 1 # Acho que essa validação aqui nem precisava, era só somar todos os contadores 
+    # (vogA, vogE, vogI, vogO, vogU) que teria o número total de vogais na frase
   if caractere in 'Aa':
     vogA +=1
-  if caractere in 'Ee':
+  if caractere in 'Ee': # Bem legal o modo como vc utilizou o 'in'
     vogE +=1
   if caractere in 'Ii':
     vogI +=1
@@ -30,5 +33,13 @@ for caractere in frase:
   elif caractere in ' ':
     espacos+=1
 
+# Tem uma função chamada ord() que é baseado na tabela ASCII. Então basta ver o número decimal da letra em especifico
+# e colocar nos parenteses. Exemplo: ord(caractere) == 65 or ord(caracter) == 97 (65 é a letra 'A' e 97 é a letra 'a')
+# No fim da na mesma, mas é algo legalzinho de se saber para grandes validações de entradas.
+
 print(f'''Aparecem {vogais} vogais e {espacos} espaços na frase.
 Sendo {vogA} vezes a vogal A, {vogE} vezes a vogal E, {vogI} vezes a vogal I, {vogO} vezes a vogal O e {vogU} vezes a vogal U.''')
+
+# Fazer dentro de um main para o usuário executar mais de uma vez 
+
+# Seus códigos ficaram bem legais! Parabéns, Isa :D 
