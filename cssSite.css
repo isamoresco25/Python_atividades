@@ -1,0 +1,141 @@
+.Header1 {
+    display: flex;
+    flex-directiom: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #3e1c94;
+    width: 100%;
+    heigh: 500px;
+    color: white;
+}
+
+.LogoeBotoes {
+    display: flex;
+    flex-directiom: row;
+    width:100%;
+    heigh:5px;
+    margin: 20px;
+}
+.Logo {
+    display:flex;
+    flex-direction:row;
+    margin:5px;
+    align-items:center;
+    width:40%;
+    justify-content: space-around;
+
+}
+
+.Botoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 55%;
+}
+
+.Botoes a {
+    display: flex;
+    color: black;
+    text-align: center;
+    justify-content: center;
+    padding: 15px 20px;
+
+}
+
+.Botoes a:hover {
+    background-color: #3e1c94;
+    color: white;
+    heigth: 100%;
+    width: 100%;
+}
+
+.TextImg {
+    display: flex;
+    flex-directiom: column;
+    width:100%;
+    heigh:5px;
+    margin: 20px;
+}
+
+.Text {
+    display:flex;
+    flex-direction: column;
+    width: 55%;
+    font-size: x-large;
+    font-family: arial;
+    margin: 100px 90px;
+    align-items: flex-start;
+
+}
+
+.Img {
+    display:flex;
+    width:45%;
+    margin: 100px;
+    align-items: flex-start;
+}
+
+.UBotao {
+    display:flex;
+    flex-directiom:column;
+    margin: 0px 90px;
+    width: 15%;
+    heigh: 30%;
+    color: white;
+    background-color: #5c1c1a;
+    justify-content: space-around;
+}
+
+. Propagandat {
+    display: flex;
+    flex-directiom: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #3e1c94;
+    width: 100%;
+    heigh: 90%;
+
+
+}
+.Propaganda1 {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #3e1c94;
+    width: 33%;
+    heigh: 800px;
+    color: white;
+    margin: 50px;
+
+
+}
+
+.Propaganda2 {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #3e1c94;
+    width: 33%;
+    heigh: 800px;
+    color: white;
+    margin: 50px;
+
+
+}
+
+.Propaganda3 {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #3e1c94;
+    width: 33%;
+    heigh: 800px;
+    color: white;
+    margin: 50px;
+
+
+}
